@@ -1,0 +1,22 @@
+{
+  "name": "XTWaterMark",
+  "version": "0.1.0",
+  "summary": "A short description of XTWaterMark.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zt.cheng/XTWaterMark",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zt.cheng": "zhitong.cheng@yintech.cn"
+  },
+  "source": {
+    "git": "https://github.com/zt.cheng/XTWaterMark.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "XTWaterMark/Classes/**/*"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - XTWaterMark (0.1.0)
+
+DEPENDENCIES:
+  - XTWaterMark (from `../`)
+
+EXTERNAL SOURCES:
+  XTWaterMark:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XTWaterMark: 150c347b72a7afa2129cc1e5382136f5e9cec03d
+
+PODFILE CHECKSUM: b8518cf2607df5f035f327709d6ba130f985529d
+
+COCOAPODS: 1.10.0

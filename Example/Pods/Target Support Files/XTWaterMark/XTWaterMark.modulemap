@@ -1,0 +1,6 @@
+framework module XTWaterMark {
+  umbrella header "XTWaterMark-umbrella.h"
+
+  export *
+  module * { export * }
+}
