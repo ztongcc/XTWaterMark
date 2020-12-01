@@ -20,6 +20,31 @@ it, simply add the following line to your Podfile:
 pod 'XTWaterMark'
 ```
 
+## Use
+
+You can generate a single style watermark:
+
+```ruby
+    XTMark * mark = [XTMark mark];
+    mark.markText = @"WaterMark";
+    mark.font = [UIFont systemFontOfSize:14];
+    mark.textColor = [UIColor lightGrayColor];
+    
+    XTMarkOption * option = [XTMarkOption defaultOption];
+    option.verticalSpace = 80;
+    option.horizontalSpace = 60;
+    option.orginalImage = [UIImage imageNamed:@"288x407.jpeg"];
+    
+    [XTWaterMark generateWaterMark:mark option:option completion:^(UIImage * _Nonnull waterMarkImage) {
+    // this will get a water mark iamge. 
+    }];
+```
+
+
+
+
+
+
 ## Author
 
 zt.cheng, ztongcc@163.com
