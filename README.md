@@ -22,7 +22,7 @@ pod 'XTWaterMark'
 
 ## Author
 
-zt.cheng, zhitong.cheng@yintech.cn
+zt.cheng, ztongcc@163.com
 
 ## License
 
