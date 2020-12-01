@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +19,104 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tJy-Q1-dZR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="496"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQT-3T-3Xz">
+                                <rect key="frame" x="0.0" y="537" width="375" height="41"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Rwp-8B-gy5"/>
+                                </constraints>
+                                <state key="normal" title="生成多重水印">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onGenerateComplexWaterMark:" destination="whP-gf-Uak" eventType="touchUpInside" id="sFw-Q5-kcS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUa-oG-Kea">
+                                <rect key="frame" x="0.0" y="578" width="187.5" height="36"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="gmu-OE-rac"/>
+                                </constraints>
+                                <state key="normal" title="生成隐形水印">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onGenerateInvisibleWaterMark:" destination="whP-gf-Uak" eventType="touchUpInside" id="QFZ-Rf-aZO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-3O-2Vs">
+                                <rect key="frame" x="187.5" y="578" width="187.5" height="36"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="APa-mi-UDr"/>
+                                </constraints>
+                                <state key="normal" title="显示隐形水印">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onShowInvisibleWaterMark:" destination="whP-gf-Uak" eventType="touchUpInside" id="U3w-3q-DcB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukv-rW-rO2">
+                                <rect key="frame" x="0.0" y="496" width="375" height="41"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="62O-T2-LuB"/>
+                                </constraints>
+                                <state key="normal" title="生成普通水印">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onGenerateWaterMark:" destination="whP-gf-Uak" eventType="touchUpInside" id="aNL-rC-GpH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IUa-oG-Kea" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="1kW-Je-WY3"/>
+                            <constraint firstItem="tJy-Q1-dZR" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" id="6j2-FV-xxD"/>
+                            <constraint firstAttribute="trailing" secondItem="tJy-Q1-dZR" secondAttribute="trailing" id="Apy-4D-Jze"/>
+                            <constraint firstItem="tJy-Q1-dZR" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="Fws-0z-vzf"/>
+                            <constraint firstAttribute="trailing" secondItem="8xD-3O-2Vs" secondAttribute="trailing" id="GZd-5q-CXp"/>
+                            <constraint firstItem="8xD-3O-2Vs" firstAttribute="width" secondItem="IUa-oG-Kea" secondAttribute="width" id="NY5-G8-B5t"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="IUa-oG-Kea" secondAttribute="bottom" constant="53" id="Nwr-Zi-Laf"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="8xD-3O-2Vs" secondAttribute="bottom" constant="53" id="ODK-m5-xz9"/>
+                            <constraint firstItem="hQT-3T-3Xz" firstAttribute="top" secondItem="ukv-rW-rO2" secondAttribute="bottom" id="PHr-7r-KUe"/>
+                            <constraint firstItem="ukv-rW-rO2" firstAttribute="top" secondItem="tJy-Q1-dZR" secondAttribute="bottom" id="Q1V-Ei-32s"/>
+                            <constraint firstItem="ukv-rW-rO2" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="U4B-lW-ewk"/>
+                            <constraint firstItem="hQT-3T-3Xz" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="fM3-ew-KoH"/>
+                            <constraint firstAttribute="trailing" secondItem="hQT-3T-3Xz" secondAttribute="trailing" id="hcp-zo-sVH"/>
+                            <constraint firstItem="8xD-3O-2Vs" firstAttribute="leading" secondItem="IUa-oG-Kea" secondAttribute="trailing" id="veT-qv-s7s"/>
+                            <constraint firstAttribute="trailing" secondItem="ukv-rW-rO2" secondAttribute="trailing" id="yMz-f5-KrZ"/>
+                            <constraint firstItem="IUa-oG-Kea" firstAttribute="top" secondItem="hQT-3T-3Xz" secondAttribute="bottom" id="ycV-lo-gOG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="tJy-Q1-dZR" id="veC-CT-2rl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
