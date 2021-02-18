@@ -28,6 +28,7 @@
 
 
 - (IBAction)onGenerateWaterMark:(UIButton *)sender {
+    // njk 
     XTMark * mark = [XTMark mark];
     mark.markText = @"WaterMark";
     mark.font = [UIFont systemFontOfSize:14];
