@@ -21,6 +21,9 @@
 {
     [super viewDidLoad];
     self.imageView.image = [UIImage imageNamed:@"288x407.jpeg"];
+    
+    
+    // huhui
 }
 
 
